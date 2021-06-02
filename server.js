@@ -26,6 +26,13 @@ app.get('/greeting/:name', (req, res) => {
 	res.send('Whats Up ' + req.params.name + ` ! ` + ` It's so great to see you!`);
 });
 
+//route to tip
 
+app.get('/tip/:total/:tipPercentage', (req, res) => {
+    
+    console.log(req.params);
+    res.send(req.params.tipPercentage);
+
+});
 
 app.listen(3000);
